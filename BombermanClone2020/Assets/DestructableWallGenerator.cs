@@ -5,7 +5,7 @@ using UnityEngine;
 public class DestructableWallGenerator : TileGenerator
 {
 
-
+    
     protected override void PlaceTile(Vector3 offset, int x, int y)
     {
         

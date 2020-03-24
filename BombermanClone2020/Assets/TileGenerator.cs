@@ -12,7 +12,9 @@ public class TileGenerator : MonoBehaviour
     protected int width = 5;
 
     [SerializeField]
-    protected int height = 5; 
+    protected int height = 5;
+
+    BoxCollider2D boxCollider;
     
     void Start()
     {
@@ -27,6 +29,7 @@ public class TileGenerator : MonoBehaviour
 
 
         }
+        boxCollider = GetComponent<BoxCollider2D>();
 
     }
     

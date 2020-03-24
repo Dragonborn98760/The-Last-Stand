@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WallGenerator : TileGenerator
 {
+    
 
     protected override void PlaceTile(Vector3 offset, int x, int y)
     {
