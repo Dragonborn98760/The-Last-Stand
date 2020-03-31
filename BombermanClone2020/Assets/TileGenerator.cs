@@ -18,7 +18,9 @@ public class TileGenerator : MonoBehaviour
     
     void Start()
     {
+
         
+
         Vector3 offset = new Vector2(width / 2f - 0.5f, height / 2f - 0.5f);
         for (int x = 0; x < width; x++)
         {
@@ -29,10 +31,12 @@ public class TileGenerator : MonoBehaviour
 
 
         }
-        boxCollider = GetComponent<BoxCollider2D>();
 
+        
     }
     
+    
+
     protected virtual void PlaceTile(Vector3 offset, int x, int y)
     {
         GameObject newTile = Instantiate(tile, new Vector3(x, y, transform.position.z) - offset, Quaternion.identity);
@@ -40,6 +44,8 @@ public class TileGenerator : MonoBehaviour
         newTile.name = "( " + x + " , " + y + " )";
 
         newTile.transform.parent = this.transform;
+
+        newTile.AddComponent<BoxCollider2D>();
     }
 
     

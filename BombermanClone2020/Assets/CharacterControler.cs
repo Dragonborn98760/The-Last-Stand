@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class CharacterControler : MonoBehaviour
 {
-        
+
+    [SerializeField]
+    GameObject bomb;
+
     public float speed = 5f;
+
+    Transform playerPositiom;
 
     private Rigidbody2D characterRigidBody;
 
@@ -22,8 +27,8 @@ public class CharacterControler : MonoBehaviour
         Vector3 movemeant = new Vector3(horizontalMovemeant, verticalMovemeant);
 
         characterRigidBody.velocity = movemeant;
-        
-        
+
+        Input.GetAxis("Jump") = Instantiate(bomb);
 
     }
 }

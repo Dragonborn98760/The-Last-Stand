@@ -26,6 +26,8 @@ public class DestructableWallGenerator : TileGenerator
             base.PlaceTile(offset, x, y);
         }
 
+        
+
         //else if (x < 9 && y < 3 || x > -9 && y > -3 || x < 9 && y > -3 || x > -9 && y < 3 )
         {
             //base.PlaceTile(offset, x, y);

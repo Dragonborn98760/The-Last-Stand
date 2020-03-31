@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class CharacterSpawn : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    [SerializeField]
+    GameObject Player;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
