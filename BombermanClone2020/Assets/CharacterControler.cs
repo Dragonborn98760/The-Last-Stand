@@ -10,14 +10,18 @@ public class CharacterControler : MonoBehaviour
 
     public float speed = 5f;
 
-    Transform playerPositiom;
+    Vector3 bombPlacemeant;
 
     private Rigidbody2D characterRigidBody;
 
     private void Start()
     {
-        characterRigidBody = GetComponent<Rigidbody2D>(); 
+        characterRigidBody = GetComponent<Rigidbody2D>();
+
+        bombPlacemeant = new Vector3(characterRigidBody.transform.position.x, characterRigidBody.transform.position.y, characterRigidBody.transform.position.z);
+
     }
+
     private void FixedUpdate()
     {
 
@@ -28,7 +32,17 @@ public class CharacterControler : MonoBehaviour
 
         characterRigidBody.velocity = movemeant;
 
-        Input.GetAxis("Jump") = Instantiate(bomb);
+        
 
+
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate<GameObject>(bomb);
+            bomb.transform.position = bombPlacemeant;
+
+        } 
     }
 }
