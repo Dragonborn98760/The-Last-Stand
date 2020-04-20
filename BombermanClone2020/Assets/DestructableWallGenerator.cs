@@ -5,12 +5,12 @@ using UnityEngine;
 public class DestructableWallGenerator : TileGenerator
 {
 
-    
+    //overradies the method so you can edit it
     protected override void PlaceTile(Vector3 offset, int x, int y)
     {
         
         
-
+        //places the tiles in selected places so the breakable walls do not spawn everywere on the map
         if (x == 3 || y == 3 || x == width -4 || y == height - 4)
         {
 
@@ -32,10 +32,7 @@ public class DestructableWallGenerator : TileGenerator
         
 
 
-        //else if (x < 9 && y < 3 || x > -9 && y > -3 || x < 9 && y > -3 || x > -9 && y < 3 )
-        {
-            //base.PlaceTile(offset, x, y);
-        }
+        
 
     }
 
