@@ -27,15 +27,19 @@ public class TileGenerator : MonoBehaviour
             for (int y = 0; y < height; y++)
             {
                 PlaceTile(offset, x, y);
+                
             }
 
-
+            
         }
 
         
+       
     }
+
     
-    
+
+
 
     protected virtual void PlaceTile(Vector3 offset, int x, int y)
     {
@@ -45,7 +49,6 @@ public class TileGenerator : MonoBehaviour
 
         newTile.transform.parent = this.transform;
 
-        newTile.AddComponent<BoxCollider2D>();
     }
 
     

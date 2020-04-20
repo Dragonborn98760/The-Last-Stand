@@ -15,18 +15,22 @@ public class DestructableWallGenerator : TileGenerator
         {
 
             base.PlaceTile(offset, x, y);
+            
 
         }
         else if (x % 2 == 0 && y % 2 == 0)
         {
             base.PlaceTile(offset, x, y);
+            
         }
         else if (y > 3 && y < height-3 || x > 3 && x < width-3)
         {
             base.PlaceTile(offset, x, y);
-        }
+            
 
+        }
         
+
 
         //else if (x < 9 && y < 3 || x > -9 && y > -3 || x < 9 && y > -3 || x > -9 && y < 3 )
         {

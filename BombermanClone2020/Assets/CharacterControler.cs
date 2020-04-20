@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CharacterControler : MonoBehaviour
 {
-
+    
     [SerializeField]
-    GameObject bomb;
+    GameObject Bomb;
 
     public float speed = 5f;
 
@@ -40,9 +40,9 @@ public class CharacterControler : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate<GameObject>(bomb);
-            bomb.transform.position = bombPlacemeant;
+            GameObject newBomb = Instantiate(Bomb, characterRigidBody.transform.position, Quaternion.identity);
 
         } 
     }
+    
 }

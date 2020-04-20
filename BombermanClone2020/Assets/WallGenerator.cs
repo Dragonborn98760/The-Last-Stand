@@ -15,12 +15,16 @@ public class WallGenerator : TileGenerator
         {
 
             base.PlaceTile(offset, x, y);
+            
 
         }
         else if (x % 2 == 0 && y % 2 == 0)
         {
             base.PlaceTile(offset, x, y);
+            
         }
+        
+        
 
     }
 
