@@ -1,28 +1,69 @@
-﻿using System.Collections;
+﻿using Assets;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterControler : MonoBehaviour
 {
-    //prefab for bomb
-    [SerializeField]
-    GameObject Bomb;
+    
+    
     //public float for the speed of charactger meaning it can be edited in unity
     public float speed = 5f;
 
-    
+    [SerializeField]
+    GameObject bombPrefab;
+    [SerializeField]
+    GameObject exploasionPrefab;
+
+    GameObject bomb;
     //new rigidbody callout
     private Rigidbody2D characterRigidBody;
 
-    private void Start()
+
+    
+
+    
+    
+
+    void Start()
     {
         //gets the rigidbody2d for rigidbody
         characterRigidBody = GetComponent<Rigidbody2D>();
 
         
 
+       
+
     }
 
+    void Update()
+    {
+        //if the player presses the respected key (space)...
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            //..instantiate new bomb prefab
+
+
+
+            GameObject bomb = GameObject.Instantiate(this.bombPrefab, characterRigidBody.transform.position, Quaternion.identity);
+            
+            
+
+        }
+        if (bomb.activeSelf == true)
+        {
+            bomb.SetActive(false);
+        }
+        else
+        {
+            bomb.SetActive(true);
+        }
+
+
+
+
+
+    }
     private void FixedUpdate()
     {
 
@@ -42,15 +83,10 @@ public class CharacterControler : MonoBehaviour
 
 
     }
-    void Update()
-    {
-        //if the player presses the respected key (space)...
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //..instantiate new bomb prefab
-            GameObject newBomb = Instantiate(Bomb, characterRigidBody.transform.position, Quaternion.identity);
 
-        } 
-    }
+
+    
+    
+    
     
 }

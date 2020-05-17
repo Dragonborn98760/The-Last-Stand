@@ -262,6 +262,7 @@ GameObject:
   - component: {fileID: 1200741671}
   - component: {fileID: 1200741670}
   - component: {fileID: 1200741674}
+  - component: {fileID: 1200741675}
   m_Layer: 0
   m_Name: Charactrer 1
   m_TagString: Player
@@ -350,8 +351,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 740f7bd048651c4408da9ae19a4635d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bomb: {fileID: 0}
   speed: 100
+  bombPrefab: {fileID: 8321454880357414303, guid: f289a3caa4617464dabca1f71774dcbf,
+    type: 3}
+  exploasionPrefab: {fileID: 0}
 --- !u!4 &1200741673
 Transform:
   m_ObjectHideFlags: 0
@@ -392,6 +395,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8018694, y: 0.81162786}
   m_EdgeRadius: 0
+--- !u!114 &1200741675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200741669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 082dd35307714ce44b65aa4799806dee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombPrefab: {fileID: 8321454880357414303, guid: f289a3caa4617464dabca1f71774dcbf,
+    type: 3}
+  exploasionPrefab: {fileID: 0}
 --- !u!1 &1641431766
 GameObject:
   m_ObjectHideFlags: 0
